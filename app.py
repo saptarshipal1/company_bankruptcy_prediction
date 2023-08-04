@@ -12,7 +12,17 @@ from model import preprocess_inputs, cbp_model
 
 df = pd.read_csv('company_bankruptcy_prediction.csv')
 
-preprocess_inputs(df)
+X_train, X_test, y_train, y_test = preprocess_inputs(df)
 
-print(X_train.shape,y_train.shape)
+model = pickle.load(open("cbp_best_model.pkl","rb"))
+
+sample_data = X_test.sample()
+
+print('The sample data is \n' + sample_data)
+
+model = pickle.load(open("cbp_best_model.pkl","rb"))
+
+model.fit(X_train,y_train)
+
+model.predict(sample_data)
 
