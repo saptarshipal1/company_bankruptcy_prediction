@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <div>
+            <div class="login"></div>
+            <h1>Company Bankruptcy Predictor</h1><br>
+            <h2>Email: saptarshi.pal1@gmail.com</h2>
+            <form action="{{ url_for('random_input_data')}}" method="POST">
+                <div class="mb-3">
+                    <input class="btn btn-primary" type="submit" value="Generate Random Data" required /><br><br>
+                </div>
+                <h2>
+                    The random input data is {{random_input_data}}
+                 </h2><br><br>
+                 <div class="mb-3">
+                    <input class="btn btn-primary" type="submit" value="Predict Company Bankruptcy" required /><br><br>
+                </div>
+                 <h2>
+                    The Company bankruptcy prediction is {{results}}
+                 </h2>
+                
+            </form>
+
+
+        </div>
+    </body>
+</html>
