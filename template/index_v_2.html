@@ -1,0 +1,68 @@
+<html>
+    <body>
+        <div>
+            <div class="login"></div>
+            <h1>Company Bankruptcy Predictor</h1><br>
+            <h2>Email: saptarshi.pal1@gmail.com</h2><br>
+            <form action="{{ url_for('predict_datapoint')}}" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">PC1</label>
+                    <input class="form-control" type="number" name="PC1"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PC2</label>
+                    <input class="form-control" type="number" name="PC2"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PC3</label>
+                    <input class="form-control" type="number" name="PC3"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PC4</label>
+                    <input class="form-control" type="number" name="PC4"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PC5</label>
+                    <input class="form-control" type="number" name="PC5"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PC6</label>
+                    <input class="form-control" type="number" name="PC6"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PC7</label>
+                    <input class="form-control" type="number" name="PC7"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PC8</label>
+                    <input class="form-control" type="number" name="PC8"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PC9</label>
+                    <input class="form-control" type="number" name="PC9"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">PC10</label>
+                    <input class="form-control" type="number" name="PC10"
+                        placeholder="Enter the value" min='-50' max='50' /><br>
+                </div>
+                <div class="mb-3">
+                    <input class="btn btn-primary" type="submit" value="Predict Bankruptcy" required /><br><br>
+                </div>
+            </form>
+                <h2>
+                    Company bankruptcy prediction: {{results}}
+                </h2>   
+            </form>
+        </div>  
+    </body>
+</html>
